@@ -18,7 +18,7 @@ class UserController extends Controller
         $user = Auth::user();
 
         $token = $user->createToken('example')->accessToken;
-        return response()->json(['status' => 200, 'token' => $token], 200);
+        return Response(['status' => 200, 'token' => $token], 200);
     }
 
     public function getUserDetail(): Response
